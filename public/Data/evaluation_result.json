@@ -1,0 +1,12 @@
+{
+  "dbi_score": 0.7710532082434076,
+  "dbcv_score": 0.4457994646025918,
+  "n_clusters": 9,
+  "outliers": 454,
+  "outlier_percentage": 6.45,
+  "interpretation": {
+    "dbi": "🟡 Cukup baik — ada sedikit tumpang tindih antar cluster.",
+    "dbcv": "🟡 Cukup stabil — variasi metrik kecil.",
+    "overall": "✅ Hasil seimbang — cluster cukup stabil dan terpisah dengan baik."
+  }
+}
