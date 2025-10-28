@@ -64,9 +64,9 @@ function PlayerDetail() {
     const fetchData = async () => {
       try {
         const [clusterRes, bioRes, summaryRes] = await Promise.all([
-          fetch("/Data/cluster_results.json").then((res) => res.json()),
-          fetch("/Data/player_biodata.json").then((res) => res.json()),
-          fetch("/Data/cluster_summary.json").then((res) => res.json()), // 🆕 Tambah fetch cluster summary
+          fetch(`${process.env.PUBLIC_URL}/Data/cluster_results.json`).then((res) => res.json()),
+          fetch(`${process.env.PUBLIC_URL}/Data/player_biodata.json`).then((res) => res.json()),
+          fetch(`${process.env.PUBLIC_URL}/Data/cluster_summary.json`).then((res) => res.json()), // 🆕 Tambah fetch cluster summary
         ]);
 
         setPlayers(bioRes);
@@ -111,8 +111,8 @@ function PlayerDetail() {
     if (!secondName) return;
 
     const [clusterRes, bioRes] = await Promise.all([
-      fetch("/Data/cluster_results.json").then((res) => res.json()),
-      fetch("/Data/player_biodata.json").then((res) => res.json()),
+      fetch(`${process.env.PUBLIC_URL}/Data/cluster_results.json`).then((res) => res.json()),
+      fetch(`${process.env.PUBLIC_URL}/Data/player_biodata.json`).then((res) => res.json()),
     ]);
 
     const compareCluster = clusterRes.find(

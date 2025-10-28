@@ -15,9 +15,9 @@ function Visualization() {
   // 🔹 Load data cluster + summary + evaluation
   useEffect(() => {
     Promise.all([
-      fetch("/data/cluster_results.json").then((res) => res.json()),
-      fetch("/data/cluster_summary.json").then((res) => res.json()),
-      fetch("/data/evaluation_result.json").then((res) => res.json()),
+      fetch(`${process.env.PUBLIC_URL}/Data/cluster_results.json`).then((res) => res.json()),
+      fetch(`${process.env.PUBLIC_URL}/Data/cluster_summary.json`).then((res) => res.json()),
+      fetch(`${process.env.PUBLIC_URL}/data/evaluation_result.json`).then((res) => res.json()),
     ])
       .then(([results, summary, evalRes]) => {
         setData(results);

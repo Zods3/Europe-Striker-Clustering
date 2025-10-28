@@ -26,7 +26,7 @@ function PlayerSearch() {
   const itemsPerPage = 100;
 
   useEffect(() => {
-    fetch("/data/cluster_results.json")
+    fetch(`${process.env.PUBLIC_URL}/Data/cluster_results.json`)
       .then((res) => res.json())
       .then((json) => {
         setData(json);
